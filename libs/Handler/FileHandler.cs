@@ -61,6 +61,7 @@ public static class FileHandler
         try
         {
             string jsonContent = File.ReadAllText($@"SavedGame.json");
+            //loads the saved game into our GameStateNodeObject
             GameStateNode newGameStateNode = JsonConvert.DeserializeObject<GameStateNode>(jsonContent);
             return newGameStateNode;
         }

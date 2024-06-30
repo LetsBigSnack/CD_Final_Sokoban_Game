@@ -38,6 +38,8 @@ public sealed class Player : GameObject
         base.Move(dx, dy);
     }
 
+    //Changes the player sprite according to the input
+
     public void changePlayerSprite(int dx, int dy){
         int[] move = [dx,dy];
         switch(move){

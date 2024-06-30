@@ -74,7 +74,7 @@ public sealed class InputHandler{
                     }
                     break;
                 case ConsoleKey.S:
-
+                    //Switches from start screen into the tutorial
                     if(engine.GameState == GameEngineState.StartScreen){
                         engine.StartTutorial();
                     }
@@ -84,7 +84,7 @@ public sealed class InputHandler{
                     }
                     break;
                 case ConsoleKey.L:
-                    
+                    //Only visiable in the StartScreen if actually LoadFile exists -> Button to use it
                     if(engine.GameState == GameEngineState.StartScreen && engine.IsSavedGameAvailable()){
                         engine.LoadGameFromJson();
                     }
@@ -103,6 +103,7 @@ public sealed class InputHandler{
                         engine.LoadGameFromJson();
                     }
                     break;
+                    // button to push the dialogue further
                     case ConsoleKey.Spacebar:
                 if(engine.GameState != GameEngineState.Tutorial){
                         return;

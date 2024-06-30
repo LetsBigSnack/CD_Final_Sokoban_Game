@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace libs
 {
+    // Singelton
     public class DialogueBox
     {
         private static DialogueBox instance;

@@ -160,9 +160,6 @@ public sealed class GameEngine
                 break;
         }
 
-
-
-
         if (_currentGameState.CurrentMap.GameFinished())
         {
             LoadNextLevel();
@@ -174,6 +171,7 @@ public sealed class GameEngine
     }
 
 
+    //Creates the StartScreen and checks if a LoadGame is available
     public void DisplayStartScreen()
     {
         Console.WriteLine("Ⓢ ⓞ ⓚ ⓞ ⓑ ⓐ ⓝ");
@@ -187,6 +185,7 @@ public sealed class GameEngine
         Console.WriteLine("[X] Exit Game");
     }
 
+    //Bool to check if the SavedGame is available
     public bool IsSavedGameAvailable()
     {
         try
@@ -270,6 +269,7 @@ public sealed class GameEngine
         }
     }
 
+    //function to undo the previous move
     public void UndoMove()
     {
         if (_currentGameState.PreviousNode == null)
@@ -288,6 +288,7 @@ public sealed class GameEngine
         Render();
     }
 
+    //function to redo the previous move
     public void RedoMove()
     {
         if (_currentGameState.NextNode == null)

@@ -92,6 +92,8 @@ public class Map {
         }
     }
 
+    //since we're using LinkedLists with nodes we need to make deep copies otherwise we can not store the referance properly
+
     public GameObject?[,] DeepCopyGameObjectLayer(){
         
         GameObject?[,] copiedGameObjectLayer = new GameObject[_mapHeight, _mapWidth];

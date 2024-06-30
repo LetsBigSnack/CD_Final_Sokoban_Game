@@ -8,8 +8,6 @@ public class SavedMap {
     private int _playerStartingY;
     
 
-
-
     public SavedMap () : base(){
         _map = new Map();
         _gameObjects = new List<GameObject>();
